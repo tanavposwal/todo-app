@@ -1,7 +1,13 @@
+#!/usr/bin/env python3
+
 import os
 import argparse
 
-TASKS_FILE = "tasks.txt"
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.realpath(__file__))
+
+# Set TASKS_FILE to always reference the correct directory
+TASKS_FILE = os.path.join(script_dir, "tasks.txt")
 
 def load_tasks():
     tasks = []
